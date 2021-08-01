@@ -45,22 +45,24 @@ export class Buscador extends Component {
           </div>
           <button type="submit">BUSCAR</button>
         </form>
-        <ul>
+        <div className={s.movies}>
          {
           this.props.movies.map(movie => {
+            console.log(movie)
             return (
-              <div key={movie.imdbID}>
+              <div className={s.mov} key={movie.imdbID}>
                 <Link to={`/movie/${movie.imdbID}`} style={{ textDecoration: 'none' }}>
-                  <li id={s.title} >{movie.Title}</li>
+                  <p id={s.title} >{movie.Title}</p>
                 </Link>
-                <img src="/favoriteAfter.png" alt="icono-fav" width="30px"
-                onClick={() => this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})}>
-                </img>
+                  <img src={movie.Poster} alt="poster of movie" height="300px" width="230px"></img>
+                  <img src="star.png" alt="icono-fav" width="30px" height="30px" 
+                  onClick={() => this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})}>
+                  </img>
               </div>
             )
           })
          }
-        </ul>
+        </div>
       </div>
     );
   }

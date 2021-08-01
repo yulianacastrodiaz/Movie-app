@@ -6,14 +6,6 @@ import './Movie.css';
 
 class Movie extends React.Component {
 
-  /**
-   * useEffect({
-   * dhrdfhndcf
-   * },[])
-   * 
-   * 
-   */
-
   componentDidMount(){
     this.props.getMovieDetail(this.props.match.params.id) 
   }

@@ -1,3 +1,4 @@
+
 .cnt {
   padding-top: 10px;
 }
@@ -15,5 +16,29 @@
 }
 
 #title{
-  color: black;
+  color:whitesmoke;
 }
+
+.movies{
+  margin-left: 12%;
+}
+
+.mov {
+  border-radius: 10px;
+  display: inline-flex;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 20px;
+  padding: 5px;
+  align-items: center;
+
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background:  #252736 
+}
+
